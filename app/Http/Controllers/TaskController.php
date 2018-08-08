@@ -39,9 +39,9 @@ class TaskController extends Controller
      */
     public function store(TaskRequest $request)
     {
-        echo json_encode($request->post()['title']);
-        // Task::create($request->all());
-        // return redirect()->route('task.index')->with('message','item has been added successfully');
+        // echo json_encode($request->post()['title']);
+        Task::create($request->all());
+        return redirect()->route('task.index')->with('message','item has been added successfully');
     }
 
     /**
