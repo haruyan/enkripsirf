@@ -24,8 +24,11 @@ class TaskRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'body' => 'required'
+            'pertanyaan' => 'required',
+            'jawabanA' => 'required',
+            'jawabanB' => 'required',
+            'jawabanC' => 'required',
+            'jawabanD' => 'required'
         ];
     }
 }

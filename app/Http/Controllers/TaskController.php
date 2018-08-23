@@ -17,7 +17,7 @@ class TaskController extends Controller
     public function index()
     {
         $tasks = Task::all();
-        return view('task.index',compact('tasks'));
+        return view('kelola',compact('tasks'));
 
     }
 
@@ -28,7 +28,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        return view('task.create');
+        return view('buat');
     }
 
     /**
@@ -41,7 +41,7 @@ class TaskController extends Controller
     {
         // echo json_encode($request->post()['title']);
         Task::create($request->all());
-        return redirect()->route('task.index')->with('message','item has been added successfully');
+        return redirect()->route('task.index')->with('message','data berhasil ditambahkan');
     }
 
     /**
@@ -52,7 +52,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return view('task.show', compact('task'));
+        return view('tampil', compact('task'));
     }
 
     /**
@@ -63,7 +63,7 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
-        return view('task.edit', compact('task'));
+        return view('ubah', compact('task'));
     }
 
     /**
@@ -76,7 +76,7 @@ class TaskController extends Controller
     public function update(TaskRequest $request, Task $task)
     {
         $task->update($request->all());
-        return redirect()->route('task.index')->with('message','item has been updated successfully');
+        return redirect()->route('task.index')->with('message','data berhasil diubah');
     }
 
     /**
@@ -88,6 +88,6 @@ class TaskController extends Controller
     public function destroy(Task $task)
     {
         $task->delete();
-        return redirect()->route('task.index')->with('message','item has been deleted successfully');
+        return redirect()->route('task.index')->with('message','data berhasil dihapus');
     }
 }

@@ -1,106 +1,112 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Sistem Enkripsi</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{{ asset('../node_modules/mdi/css/materialdesignicons.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('../node_modules/simple-line-icons/css/simple-line-icons.css')}}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{{ asset('star/css/style.css')}}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{{ asset('star/images/favicon.png')}}" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:this_is_stars/partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="{{ asset('star/index.html')}}"><img src="{{ asset('star/images/logo.png')}}" alt="logo"/></a>
+        <!-- <a class="navbar-brand brand-logo-mini" href="{{ asset('star/index.html')}}"><img src="{{ asset('star/images/logo-mini.svg')}}" alt="logo"/></a> -->
+      </div>
       
-      @yield('title')
-
-    </title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="{{asset('distribution/vendor/bootstrap/css/bootstrap.min.css')}}">
-    <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="{{asset('distribution/vendor/font-awesome/css/font-awesome.min.css')}}">
-    <!-- Google fonts - Roboto-->
-    <link rel="stylesheet" href="{{asset('distribution/https://fonts.googleapis.com/css?family=Roboto:300,400,700')}}">
-    <!-- Bootstrap Select-->
-    <link rel="stylesheet" href="{{asset('distribution/vendor/bootstrap-select/css/bootstrap-select.min.css')}}">
-    <!-- owl carousel-->
-    <link rel="stylesheet" href="{{asset('distribution/vendor/owl.carousel/assets/owl.carousel.css')}}">
-    <link rel="stylesheet" href="{{asset('distribution/vendor/owl.carousel/assets/owl.theme.default.css')}}">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="{{asset('distribution/css/style.default.css')}}" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="{{asset('distribution/css/custom.css')}}">
-    <!-- Favicon and apple touch icons-->
-    <link rel="shortcut icon" href="{{asset('distribution/img/favicon.ico')}}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="{{asset('distribution/img/apple-touch-icon.png')}}">
-    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('distribution/img/apple-touch-icon-57x57.png')}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('distribution/img/apple-touch-icon-72x72.png')}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('distribution/img/apple-touch-icon-76x76.png')}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('distribution/img/apple-touch-icon-114x114.png')}}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('distribution/img/apple-touch-icon-120x120.png')}}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('distribution/img/apple-touch-icon-144x144.png')}}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{asset('distribution/img/apple-touch-icon-152x152.png')}}">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="{{asset('distribution/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')}}"></script>
-        <script src="{{asset('distribution/https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script><![endif]-->
-  </head>
-  <body>
-    <div id="all">
-
-      @yield('modal')
-
-      <div id="heading-breadcrumbs">
-        <div class="container">
-          <div class="row d-flex align-items-center flex-wrap">
-            <div class="col-md-7">
-              <h1 class="h2">
-
-                @yield('subtitle')
-
-              </h1>
-            </div>
-            <div class="col-md-5">
-
-              @yield('top-side menu')
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="content">
-
-        @yield('content')
-
-      </div>
-        
-      <!-- FOOTER -->
-      <footer class="main-footer">
-        
-        <div class="copyrights">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-4 text-center-md">
-                <p>&copy; 2018. Muhammad Sufyan Tsauri</p>
-              </div>
-              <div class="col-lg-8 text-right text-center-md">
-                <p>Template design by <a href="{{asset('distribution/https://bootstrapious.com/free-templates')}}">Bootstrapious Templates </a></p>
-                <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+      <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+      </button>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:this_is_stars/partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="profile-image"> <img src="{{ asset('star/images/faces/face4.jpg')}}" alt="image"/> <span class="online-status online"></span> </div>
+              <div class="profile-name">
+                <p class="name">M. Sufyan Tsauri</p>
+                <p class="designation">Admin</p>
+                <div class="badge badge-teal mx-auto mt-3">Aktif</div>
               </div>
             </div>
-          </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="{{ asset('/beranda')}}"><img class="menu-icon" src="{{ asset('star/images/menu_icons/01.png')}}" alt="menu icon"><span class="menu-title">Beranda</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ route('task.index') }}"><img class="menu-icon" src="{{ asset('star/images/menu_icons/04.png')}}" alt="menu icon"><span class="menu-title">Kelola</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ route('task.create')}}"><img class="menu-icon" src="{{ asset('star/images/menu_icons/09.png')}}" alt="menu icon"> <span class="menu-title">Tambah data</span></a></li>
+          <li class="nav-item purchase-button"><a class="nav-link" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+          <i class="mdi mdi-logout" style="color: #ffffff"></i> Keluar</a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+          </form>
+          </li>
+
+
+          {{-- <a class="dropdown-item" href="{{ route('logout') }}"
+             onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+              {{ __('Logout') }}
+          </a>
+
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+          </form> --}}
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          {{-- <div class="row"> --}}
+
+          @yield('main-panel')
+
+          {{-- </div> --}}
         </div>
-      </footer>
+        <!-- content-wrapper ends -->
+        <!-- partial:this_is_stars/partials/_footer.html -->
+{{--         <footer class="footer">
+          <div class="container-fluid clearfix">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018 <a href="http://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+          </div>
+        </footer> --}}
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
     </div>
-    <!-- Javascript files-->
-    <script src="{{asset('distribution/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('distribution/vendor/popper.js/umd/popper.min.js')}}"> </script>
-    <script src="{{asset('distribution/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('distribution/vendor/jquery.cookie/jquery.cookie.js')}}"> </script>
-    <script src="{{asset('distribution/vendor/waypoints/lib/jquery.waypoints.min.js')}}"> </script>
-    <script src="{{asset('distribution/vendor/jquery.counterup/jquery.counterup.min.js')}}"> </script>
-    <script src="{{asset('distribution/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('distribution/vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js')}}"></script>
-    <script src="{{asset('distribution/js/jquery.parallax-1.1.3.js')}}"></script>
-    <script src="{{asset('distribution/vendor/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
-    <script src="{{asset('distribution/vendor/jquery.scrollto/jquery.scrollTo.min.js')}}"></script>
-    <script src="{{asset('distribution/js/front.js')}}"></script>
-  </body>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="{{ asset('../node_modules/jquery/dist/jquery.min.js')}}"></script>
+  <script src="{{ asset('../node_modules/popper.js/dist/umd/popper.min.js')}}"></script>
+  <script src="{{ asset('../node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{{ asset('star/js/off-canvas.js')}}"></script>
+  <script src="{{ asset('star/js/misc.js')}}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <!-- End custom js for this page-->
+</body>
+
 </html>

@@ -12,11 +12,31 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
-Route::resource('task','TaskController');
+// Route::get('/beranda', function () {
+//     return view('beranda');
+// });
+
+// Route::resource('task','TaskController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/beranda', 'HomeController@index')->name('beranda');
+
+Route::group(['middleware' => ['web','auth']], function(){
+	
+
+	Route::get('/home', function(){
+		return view('beranda');
+	});
+
+	Route::get('/beranda', function () {
+    return view('beranda');
+	});
+
+
+	Route::resource('task','TaskController');
+
+});
