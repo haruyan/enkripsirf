@@ -63,8 +63,11 @@
             </div>
 
             <br>
-            <button type="submit" class="btn btn-success mr-2">Ubah</button>
-            <button class="btn btn-light">Kembali</button>
+            {{-- <button type="submit" class="btn btn-success mr-2">Ubah</button> --}}
+            <div class="template-demo">
+            <a href="{{ route('task.index') }}" class=""><button type="button" class="btn btn-light btn-md"><i class="mdi mdi-keyboard-return"></i> Kembali</button></a>
+            <a href="{{ route('task.edit',$task->id) }}" class=""><button type="button" class="btn btn-primary btn-md"><i class="mdi mdi-pencil"></i> Ubah</button></a>
+            </div>
 
           </form>
         </div>

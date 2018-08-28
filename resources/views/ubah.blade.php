@@ -5,7 +5,7 @@
     <div class="col-12 grid-margin">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Tambahkan Soal Baru</h4>
+          <h4 class="card-title">Ubah Soal</h4>
           
            {!! Form::model($task,array('route'=>['task.update',$task->id],'method'=> 'POST')) !!}
             @method('PUT')
@@ -57,9 +57,17 @@
                           </div>
                         </div>
 
-                        <div class='form-group'>
-                            {!! Form::button('<i class="mdi mdi-save"></i> Ubah',['type'=>'submit','class'=>'btn btn-success mr-2']) !!}
+                        <br>
+
+                        <div class="template-demo">
+                        <a href="{{ route('task.index') }}" class=""><button type="button" class="btn btn-light btn-md"><i class="mdi mdi-cancel"></i> Batal</button></a>
+                        <a href="{{ route('task.index') }}" class=""><button type="submit" class="btn btn-warning btn-md"><i class="mdi mdi-autorenew"></i> Simpan Perubahan</button></a>
                         </div>
+
+                        {{-- <div class='form-group'>
+                            {!! Form::button('<i class="mdi mdi-save"></i> Ubah',['type'=>'submit','class'=>'btn btn-success mr-2']) !!}
+                        </div> --}}
+
                     {!! Form::close() !!}
 
 

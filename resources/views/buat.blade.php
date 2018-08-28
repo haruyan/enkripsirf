@@ -57,7 +57,7 @@
                         </div>
 
                         <div class='form-group'>
-                            {!! Form::button('<i class="mdi mdi-save"></i> Tambahkan',['type'=>'submit','class'=>'btn btn-success mr-2']) !!}
+                            {!! Form::button('<i class="mdi mdi-shape-square-plus"></i> Tambahkan',['type'=>'submit','class'=>'btn btn-success mr-2']) !!}
                         </div>
                     {!! Form::close() !!}
 
