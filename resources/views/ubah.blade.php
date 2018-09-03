@@ -7,8 +7,8 @@
         <div class="card-body">
           <h4 class="card-title">Ubah Soal</h4>
           
-           {!! Form::model($task,array('route'=>['task.update',$task->id],'method'=> 'POST')) !!}
-            @method('PUT')
+           {!! Form::model($task,array('route'=>['task.update',$task->id],'method'=> 'PUT')) !!}
+            {{-- @method('PUT') --}}
             @csrf
                         <div class='form-group'>
                           <label for="pertanyaan">Pertanyaan</label>
