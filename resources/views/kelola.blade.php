@@ -7,7 +7,9 @@
         <div class="card-body">
           <h5 class="card-title mb-4">Kelola Soal</h5>
           @if(Session::has('message'))
-                  <div class="alert alert-success">{{ Session::get('message') }}</div>
+            <div class="alert alert-success">{{ Session::get('message') }}</div>
+          @elseif(Session::has('destroy'))
+            <div class="alert alert-warning">{{ Session::get('destroy') }}</div>
           @endif
           <div class="table-responsive">
             <table class="table center-aligned-table">
@@ -44,4 +46,20 @@
       </div>
     </div>
   </div>
+@endsection
+@section('script')
+  <script type="text/javascript">
+    $(()=>{
+      if({!! Session::has('message') !!}){
+        swal('Berhasil','data telah dienkripsi','success');
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    $(()=>{
+      if({!! Session::has('destroy') !!}){
+        swal('Peringatan','data telah dihapus','warning');
+      }
+    });
+  </script>
 @endsection

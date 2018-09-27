@@ -36,7 +36,9 @@ Route::group(['middleware' => ['web','auth']], function(){
     return view('beranda');
 	});
 
-
-	Route::resource('task','TaskController');
+	Route::resources([
+		'task'=>'TaskController'
+	]);
+	Route::get('task/decrypt/{id}','TaskController@decrypt')->name('task.decrypt');
 
 });

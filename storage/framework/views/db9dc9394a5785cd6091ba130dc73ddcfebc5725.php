@@ -11,8 +11,8 @@
             <?php echo csrf_field(); ?>
                         <div class='form-group'>
                           <label for="pertanyaan">Pertanyaan</label>
-                          <?php echo Form::textarea('pertanyaan',null,['class'=>'form-control', 'placeholder'=>'Masukkan pertanyaan', 'rows'=> '6']); ?>
-
+                          
+                          <textarea class="form-control" placeholder="Masukkan pertanyaan" rows="6" name="pertanyaan" cols="50"><?php echo e($task ->pertanyaan); ?></textarea>
                         </div>
 
                         <p class="card-description">
@@ -24,8 +24,8 @@
                             <div class="form-group row">
                               <label class="col-sm-1 col-form-label">A</label>
                               <div class="col-sm-11">
-                                <?php echo Form::text('jawabanA',null,['class'=>'form-control','placeholder'=>'Jawaban A']); ?>
-
+                                
+                                <input class="form-control" placeholder="Jawaban A" name="jawabanA" type="text" value="<?php echo e($task ->jawabanA); ?>">
                               </div>
                             </div>
                           </div>
@@ -33,8 +33,7 @@
                             <div class="form-group row">
                               <label class="col-sm-1 col-form-label">B</label>
                               <div class="col-sm-11">
-                                <?php echo Form::text('jawabanB',null,['class'=>'form-control','placeholder'=>'Jawaban B']); ?>
-
+                                <input class="form-control" placeholder="Jawaban B" name="jawabanB" type="text" value="<?php echo e($task ->jawabanB); ?>">
                               </div>
                             </div>
                           </div>
@@ -45,8 +44,7 @@
                             <div class="form-group row">
                               <label class="col-sm-1 col-form-label">C</label>
                               <div class="col-sm-11">
-                                <?php echo Form::text('jawabanC',null,['class'=>'form-control','placeholder'=>'Jawaban C']); ?>
-
+                                <input class="form-control" placeholder="Jawaban C" name="jawabanC" type="text" value="<?php echo e($task ->jawabanC); ?>">
                               </div>
                             </div>
                           </div>
@@ -54,8 +52,7 @@
                             <div class="form-group row">
                               <label class="col-sm-1 col-form-label">D</label>
                               <div class="col-sm-11">
-                                <?php echo Form::text('jawabanD',null,['class'=>'form-control','placeholder'=>'Jawaban D']); ?>
-
+                                <input class="form-control" placeholder="Jawaban D" name="jawabanD" type="text" value="<?php echo e($task ->jawabanD); ?>">
                               </div>
                             </div>
                           </div>
@@ -72,6 +69,8 @@
 
                     <?php echo Form::close(); ?>
 
+
+                    <br>
 
 
             <?php if( count( $errors ) > 0 ): ?>

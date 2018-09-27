@@ -64,7 +64,7 @@
             
             <div class="template-demo">
             <a href="<?php echo e(route('task.index')); ?>" class=""><button type="button" class="btn btn-light btn-md"><i class="mdi mdi-keyboard-return"></i> Kembali</button></a>
-            <a href="<?php echo e(route('task.edit',$task->id)); ?>" class=""><button type="button" class="btn btn-primary btn-md"><i class="mdi mdi-pencil"></i> Ubah</button></a>
+            <a href="<?php echo e(route('task.decrypt',$task->id)); ?>" class=""><button type="button" class="btn btn-primary btn-md"><i class="mdi mdi-key"></i> Dekripsi</button></a>
             </div>
 
           </form>

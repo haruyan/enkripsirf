@@ -98,12 +98,22 @@
   <script src="{{ asset('../node_modules/jquery/dist/jquery.min.js')}}"></script>
   <script src="{{ asset('../node_modules/popper.js/dist/umd/popper.min.js')}}"></script>
   <script src="{{ asset('../node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.1/sweetalert2.all.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="{{ asset('star/js/off-canvas.js')}}"></script>
   <script src="{{ asset('star/js/misc.js')}}"></script>
+
+  @yield('script')
+  <script type="text/javascript">
+    $(()=>{
+      if({!! count($errors) > 0 !!}){
+        swal("Opps",'Semua data harus diisi','error');
+      }
+    });
+  </script>
   <!-- endinject -->
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->

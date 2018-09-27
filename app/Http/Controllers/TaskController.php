@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Task;
+use App\Taskdecrypt;
 use Illuminate\Http\Request;
 
 use App\Http\Requests\TaskRequest;
@@ -50,18 +51,33 @@ class TaskController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Task $task)
+
+    // public function show2(Task $task)
+    // {
+    //     return view('tampil2', compact('task'));
+    // }
+
+    public function show($id)
     {
+        $task = Task::find($id);
         return view('tampil', compact('task'));
     }
 
+
+    public function decrypt($id)
+    {
+        $task = Taskdecrypt::find($id);
+        return view('tampildecrypt', compact('task'));
+    }
+ 
+   
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Task $task)
+    public function edit(Taskdecrypt $task)
     {
         return view('ubah', compact('task'));
     }
@@ -88,6 +104,6 @@ class TaskController extends Controller
     public function destroy(Task $task)
     {
         $task->delete();
-        return redirect()->route('task.index')->with('message','data berhasil dihapus');
+        return redirect()->route('task.index')->with('destroy','data berhasil dihapus');
     }
 }

@@ -62,7 +62,6 @@
                     <?php echo Form::close(); ?>
 
 
-
             <?php if( count( $errors ) > 0 ): ?>
                   <ul class='alert alert-danger'>
                       <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

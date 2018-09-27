@@ -12,7 +12,8 @@
             @csrf
                         <div class='form-group'>
                           <label for="pertanyaan">Pertanyaan</label>
-                          {!! Form::textarea('pertanyaan',null,['class'=>'form-control', 'placeholder'=>'Masukkan pertanyaan', 'rows'=> '6']) !!}
+                          {{-- {!! Form::textarea('pertanyaan',null,['class'=>'form-control', 'placeholder'=>'Masukkan pertanyaan', 'rows'=> '6']) !!} --}}
+                          <textarea class="form-control" placeholder="Masukkan pertanyaan" rows="6" name="pertanyaan" cols="50">{{ $task ->pertanyaan }}</textarea>
                         </div>
 
                         <p class="card-description">
@@ -24,7 +25,8 @@
                             <div class="form-group row">
                               <label class="col-sm-1 col-form-label">A</label>
                               <div class="col-sm-11">
-                                {!! Form::text('jawabanA',null,['class'=>'form-control','placeholder'=>'Jawaban A']) !!}
+                                {{-- {!! Form::text('jawabanA',null,['class'=>'form-control','placeholder'=>'Jawaban A']) !!} --}}
+                                <input class="form-control" placeholder="Jawaban A" name="jawabanA" type="text" value="{{ $task ->jawabanA }}">
                               </div>
                             </div>
                           </div>
@@ -32,7 +34,7 @@
                             <div class="form-group row">
                               <label class="col-sm-1 col-form-label">B</label>
                               <div class="col-sm-11">
-                                {!! Form::text('jawabanB',null,['class'=>'form-control','placeholder'=>'Jawaban B']) !!}
+                                <input class="form-control" placeholder="Jawaban B" name="jawabanB" type="text" value="{{ $task ->jawabanB }}">
                               </div>
                             </div>
                           </div>
@@ -43,7 +45,7 @@
                             <div class="form-group row">
                               <label class="col-sm-1 col-form-label">C</label>
                               <div class="col-sm-11">
-                                {!! Form::text('jawabanC',null,['class'=>'form-control','placeholder'=>'Jawaban C']) !!}
+                                <input class="form-control" placeholder="Jawaban C" name="jawabanC" type="text" value="{{ $task ->jawabanC }}">
                               </div>
                             </div>
                           </div>
@@ -51,7 +53,7 @@
                             <div class="form-group row">
                               <label class="col-sm-1 col-form-label">D</label>
                               <div class="col-sm-11">
-                                {!! Form::text('jawabanD',null,['class'=>'form-control','placeholder'=>'Jawaban D']) !!}
+                                <input class="form-control" placeholder="Jawaban D" name="jawabanD" type="text" value="{{ $task ->jawabanD }}">
                               </div>
                             </div>
                           </div>
@@ -69,6 +71,8 @@
                         </div> --}}
 
                     {!! Form::close() !!}
+
+                    <br>
 
 
             @if( count( $errors ) > 0 )

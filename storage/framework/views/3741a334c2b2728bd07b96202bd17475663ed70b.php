@@ -5,7 +5,9 @@
         <div class="card-body">
           <h5 class="card-title mb-4">Kelola Soal</h5>
           <?php if(Session::has('message')): ?>
-                  <div class="alert alert-success"><?php echo e(Session::get('message')); ?></div>
+            <div class="alert alert-success"><?php echo e(Session::get('message')); ?></div>
+          <?php elseif(Session::has('destroy')): ?>
+            <div class="alert alert-warning"><?php echo e(Session::get('destroy')); ?></div>
           <?php endif; ?>
           <div class="table-responsive">
             <table class="table center-aligned-table">
@@ -44,5 +46,21 @@
       </div>
     </div>
   </div>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
+  <script type="text/javascript">
+    $(()=>{
+      if(<?php echo Session::has('message'); ?>){
+        swal('Berhasil','data telah dienkripsi','success');
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    $(()=>{
+      if(<?php echo Session::has('destroy'); ?>){
+        swal('Peringatan','data telah dihapus','warning');
+      }
+    });
+  </script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.template', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
