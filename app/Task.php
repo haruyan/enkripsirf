@@ -43,7 +43,6 @@ class Task extends Model
 	{
 	    $cipherMessage = [];
 	    $position = ($rails * 2) - 2;
-	    // for ($index = 0; $index < strlen($plainMessage); $index++) {
 	    for ($index = 0; $index < strlen($plainMessage); $index++) {
 	        for ($step = 0; $step < $rails; $step++) {
 	            if (!isset($cipherMessage[$step])) {

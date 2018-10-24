@@ -34,7 +34,7 @@
                         </td>
                         <td>
                           {!!  Form::open(array('route'=>['task.destroy',$task->id],'method'=>'DELETE')) !!}
-                              {!! Form::button('<i class="mdi mdi-delete"></i> Delete',['class'=>'btn btn-outline-danger btn-md','type'=>'submit']) !!}
+                              {!! Form::button('<i class="mdi mdi-delete"></i> Hapus',['class'=>'btn btn-outline-danger btn-md','type'=>'submit']) !!}
                           {!! Form::close() !!}
                         </td>
                     </tr>

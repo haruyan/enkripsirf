@@ -35,7 +35,6 @@ class Taskdecrypt extends Model
 	function decode($cipherMessage, $rails)
 	{
 	    $position = ($rails * 2) - 2;
-	    // $textLength = strlen(utf8_decode($cipherMessage));
 	    $textLength = strlen($cipherMessage);
 	    $minLength = floor($textLength / $position);
 	    $balance = $textLength % $position;
@@ -59,7 +58,6 @@ class Taskdecrypt extends Model
 	    }
 	    //convert row of characters to plain message
 	    $plainText = '';
-	    // while (strlen($plainText) < $textLength) {
 	    while (strlen($plainText) < $textLength) {
 	        for ($charIndex = 0; $charIndex < $position; $charIndex++) {
 	            if (isset($strings[$charIndex])) {
